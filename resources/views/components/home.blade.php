@@ -8,7 +8,7 @@
     </p>
 </div>
 
-@if (Auth::user()->email === 'admine@ocpgroup.ma')
+@if (Auth::user()->is_admin === 1)
     <div class="my-20 flex justify-around ">
         <div class="text-center">
 

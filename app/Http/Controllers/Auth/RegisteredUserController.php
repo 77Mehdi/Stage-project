@@ -61,6 +61,7 @@ class RegisteredUserController extends Controller
             'mle' => $request->mle,
             'serves' => $request->serves,
             'email' => $request->email,
+            'is_admin '=>  0 ,
             'password' => Hash::make($request->password),
         ]);
 

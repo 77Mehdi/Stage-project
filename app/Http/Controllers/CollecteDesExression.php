@@ -6,6 +6,7 @@ use App\Mail\SendInvitation;
 use App\Models\ExpressionDesBessoins;
 use App\Models\ResoltData;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class CollecteDesExression extends Controller
@@ -14,6 +15,8 @@ class CollecteDesExression extends Controller
     {
 
         $path = $req->path();
+
+        
 
         switch ($path) {
             case 'dashboard':
@@ -28,6 +31,7 @@ class CollecteDesExression extends Controller
             case 'realisation':
                 $type = 'realisation';
         }
+
 
         return view('dashboard', [
             'type' => $type,
